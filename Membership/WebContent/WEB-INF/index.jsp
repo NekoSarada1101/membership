@@ -19,19 +19,27 @@
     }
 %>
 
-<h1>ようこそ<%=name%>さん</h1>
-<form action="Login" method="get">
-    <input type="submit" value="ログイン" class="btn btn-primary shadow">
-</form>
-<form action="Register" method="get">
-    <input type="submit" value="会員登録" class="btn btn-success shadow">
-</form>
-<%if (!name.equals("ゲスト")) {%>
-<form action="Logout" method="post">
-    <input type="submit" value="ログアウト" class="btn btn-secondary shadow">
-</form>
-<%}%>
+<article>
+    <h1>ようこそ<%=name%>さん</h1>
+    <form action="Login" method="get">
+        <input type="submit" value="ログイン" class="btn btn-primary shadow">
+    </form>
 
-<%@include file="/WEB-INF/jsp/footer.jsp"%>
+    <form action="Register" method="get">
+        <input type="submit" value="会員登録" class="btn btn-success shadow">
+    </form>
+
+    <form action="Selector" method="post">
+        <input type="submit" value="会員一覧" class="btn btn-info shadow">
+    </form>
+
+    <%if (!name.equals("ゲスト")) {%>
+    <form action="Logout" method="post">
+        <input type="submit" value="ログアウト" class="btn btn-secondary shadow">
+    </form>
+    <%}%>
+
+    <%@include file="/WEB-INF/jsp/footer.jsp" %>
+</article>
 </body>
 </html>

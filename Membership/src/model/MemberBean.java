@@ -19,6 +19,10 @@ public class MemberBean implements Serializable {
         this.password = pass;
     }
 
+    public MemberBean() {
+
+    }
+
     public MemberBean(String name, String pass) {
         this.name = name;
         this.password = pass;

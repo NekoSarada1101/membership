@@ -3,6 +3,8 @@ package dao;
 import model.MemberBean;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MemberDAO extends DaoBase {
     public MemberBean findMember(String name, String password) {
@@ -41,7 +43,7 @@ public class MemberDAO extends DaoBase {
             stmt.setInt(1, memberBean.getId());
             rs = stmt.executeQuery();
 
-            if(rs.next()){
+            if (rs.next()) {
                 throw new Exception("既に存在するIDです");
             }
 
@@ -64,7 +66,7 @@ public class MemberDAO extends DaoBase {
         } catch (SQLException e) {
             e.printStackTrace();
             return false;
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         } finally {
@@ -74,5 +76,33 @@ public class MemberDAO extends DaoBase {
             }
         }
         return true;
+    }
+
+    public List<MemberBean> MemberInfo() {
+        List<MemberBean> list = new ArrayList<MemberBean>();
+        try {
+            MemberBean memberBean = null;
+            super.DbOpen();
+            super.stmt = con.prepareStatement("SELECT * FROM member");
+            rs = this.stmt.executeQuery();
+            while (rs.next()) {
+                memberBean = new MemberBean();
+                memberBean.setId(this.rs.getInt("memberId"));
+                memberBean.setName(this.rs.getString("memberName"));
+                memberBean.setAuth(this.rs.getString("authority"));
+                memberBean.setAddr(this.rs.getString("address"));
+                memberBean.setPhone_addr(this.rs.getString("phone"));
+                list.add(memberBean);
+            }
+            stmt.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                super.DbClose();
+            } catch (Exception e) {
+            }
+        }
+        return list;
     }
 }
