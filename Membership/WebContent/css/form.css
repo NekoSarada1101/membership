@@ -1,0 +1,32 @@
+p {
+  text-align: center;
+}
+
+.group {
+  padding-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 24px;
+}
+
+span {
+  font-size: 16px;
+  color: gray;
+}
+
+.error {
+  color: red;
+  font-size: 18px;
+}
+
+.loginError {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+

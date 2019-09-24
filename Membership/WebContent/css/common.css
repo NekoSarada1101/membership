@@ -1,0 +1,23 @@
+body {
+  margin-top: 20px;
+  background-color: rgba(51, 204, 255, .3);
+}
+
+.container {
+  padding: 0;
+}
+
+body, article {
+  border-radius: 10px;
+}
+
+article {
+  background-color: white;
+}
+
+h1 {
+  border-bottom: black solid 3px;
+  padding: 10px;
+  margin: 0px 20px 50px 20px;
+  text-align: center;
+}

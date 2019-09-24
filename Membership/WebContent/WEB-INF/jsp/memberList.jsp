@@ -14,15 +14,21 @@
     <title>会員一覧</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/list.css">
 </head>
-<body>
+<body class="container shadow">
 <article>
-    <table>
+    <h1>Member List</h1>
+    <table class="table table-hover">
+        <thead>
         <tr>
-            <th>会員名</th>
-            <th>会員住所</th>
+            <th scope="col">会員名</th>
+            <th scope="col">会員住所</th>
         </tr>
+        </thead>
+
+        <tbody>
         <% for (MemberBean bean : list) { %>
         <tr>
             <td><%=bean.getName() %>
@@ -33,6 +39,7 @@
         <%
             }
         %>
+        </tbody>
     </table>
 </article>
 

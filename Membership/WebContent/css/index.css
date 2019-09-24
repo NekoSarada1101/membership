@@ -1,14 +1,5 @@
 body {
   text-align: center;
-  padding-bottom: 30px;
-  margin-top: 20px;
-  background-color: rgba(51, 204, 255, .5);
-}
-
-h1 {
-  border-bottom: black solid 3px;
-  padding: 10px;
-  margin-bottom: 50px;
 }
 
 input {
