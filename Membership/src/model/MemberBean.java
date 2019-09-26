@@ -20,12 +20,6 @@ public class MemberBean implements Serializable {
     }
 
     public MemberBean() {
-
-    }
-
-    public MemberBean(String name, String pass) {
-        this.name = name;
-        this.password = pass;
     }
 
     public int getId() {

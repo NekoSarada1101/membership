@@ -1,4 +1,5 @@
 <%@ page import="model.MemberBean" %>
+<%@ page import="model.LoginBean" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
 <!DOCTYPE html>
@@ -13,15 +14,15 @@
 </head>
 <body class="container shadow">
 <%
-    MemberBean memberBean = (MemberBean) session.getAttribute("memberBean");
+    LoginBean loginBean = (LoginBean) session.getAttribute("loginBean");
     String name = "ゲスト";
-    if (memberBean != null) {
-        name = memberBean.getName();
+    if (loginBean != null) {
+        name = loginBean.getName();
     }
 %>
 
 <article>
-    <h1>ようこそ<%=name%>さん</h1>
+    <div><h1>ようこそ<%=name%>さん</h1></div>
     <form action="Login" method="get">
         <input type="submit" value="ログイン" class="btn btn-primary shadow">
     </form>

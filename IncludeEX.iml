@@ -15,10 +15,9 @@
       <sourceFolder url="file://$MODULE_DIR$/IncludeEX/src" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="jdk" jdkName="java8" jdkType="JavaSDK" />
     <orderEntry type="library" name="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5" level="application" />
     <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.web.container" level="application" />
     <orderEntry type="library" name="org.eclipse.jst.j2ee.internal.module.container" level="application" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>

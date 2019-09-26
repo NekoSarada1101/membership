@@ -41,6 +41,11 @@
         %>
         </tbody>
     </table>
+
+    <form action="Index" method="get">
+        <p><input type="submit" value="戻る" class="btn btn-primary shadow"></p>
+    </form>
+
 </article>
 
 </body>

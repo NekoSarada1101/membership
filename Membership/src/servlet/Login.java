@@ -2,7 +2,7 @@
 package servlet;
 
 import dao.MemberDAO;
-import model.MemberBean;
+import model.LoginBean;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -29,15 +29,15 @@ public class Login extends HttpServlet {
 
         MemberDAO memberDAO = new MemberDAO();
 
-        MemberBean memberBean = memberDAO.findMember(name, password);
+        LoginBean loginBean = memberDAO.findMember(name, password);
 
         String path = "";
         HttpSession session = request.getSession();
-        if (memberBean == null) {
+        if (loginBean == null) {
             session.setAttribute("loginFailed", "名前またはパスワードが間違っています。");
             path = "WEB-INF/jsp/login.jsp";
         } else {
-            session.setAttribute("memberBean", memberBean);
+            session.setAttribute("loginBean", loginBean);
             path = "WEB-INF/index.jsp";
         }
         request.getRequestDispatcher(path).forward(request, response);

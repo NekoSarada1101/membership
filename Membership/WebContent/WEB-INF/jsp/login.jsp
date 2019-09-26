@@ -13,6 +13,7 @@
 <body class="container shadow">
 <%
     String error = (String) session.getAttribute("loginFailed");
+    session.invalidate();
     if (error == null) {
         error = "";
     }

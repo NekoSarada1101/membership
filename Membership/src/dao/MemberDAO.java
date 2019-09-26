@@ -1,5 +1,6 @@
 package dao;
 
+import model.LoginBean;
 import model.MemberBean;
 
 import java.sql.SQLException;
@@ -7,13 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MemberDAO extends DaoBase {
-    public MemberBean findMember(String name, String password) {
+    public LoginBean findMember(String name, String password) {
 
-        MemberBean memberBean = null;
+        LoginBean loginBean = null;
         try {
             super.DbOpen();
 
-            String sql = "SELECT * FROM member, password WHERE member.memberName=? AND password.password=?";
+            String sql = "SELECT * FROM member, password WHERE member.memberName=? AND password.password=? AND member.memberId = password.id";
             stmt = this.con.prepareStatement(sql);
             stmt.setString(1, name);
             stmt.setString(2, password);
@@ -21,7 +22,7 @@ public class MemberDAO extends DaoBase {
             rs = this.stmt.executeQuery();
             rs.next();
 
-            memberBean = new MemberBean(this.rs.getString("memberName"), this.rs.getString("password"));
+            loginBean = new LoginBean(this.rs.getString("memberName"), this.rs.getString("password"));
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -32,7 +33,7 @@ public class MemberDAO extends DaoBase {
                 e.printStackTrace();
             }
         }
-        return memberBean;
+        return loginBean;
     }
 
     public boolean insertMember(MemberBean memberBean) {
