@@ -22,7 +22,7 @@
 %>
 
 <article>
-    <div><h1>ようこそ<%=name%>さん</h1></div>
+    <div class="top shadow"><h1>ようこそ<%=name%>さん</h1></div>
     <form action="Login" method="get">
         <input type="submit" value="ログイン" class="btn btn-primary shadow">
     </form>

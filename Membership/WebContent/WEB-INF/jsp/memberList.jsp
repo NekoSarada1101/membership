@@ -19,33 +19,35 @@
 </head>
 <body class="container shadow">
 <article>
-    <h1>Member List</h1>
-    <table class="table table-hover">
-        <thead>
-        <tr>
-            <th scope="col">会員名</th>
-            <th scope="col">会員住所</th>
-        </tr>
-        </thead>
+    <div class="top shadow"><h1>Member List</h1></div>
+    <div class="list">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col">会員名</th>
+                <th scope="col">会員住所</th>
+            </tr>
+            </thead>
 
-        <tbody>
-        <% for (MemberBean bean : list) { %>
-        <tr>
-            <td><%=bean.getName() %>
-            </td>
-            <td><%=bean.getAddr() %>
-            </td>
-        </tr>
-        <%
-            }
-        %>
-        </tbody>
-    </table>
-
+            <tbody>
+            <% for (MemberBean bean : list) { %>
+            <tr>
+                <td><%=bean.getName() %>
+                </td>
+                <td><%=bean.getAddr() %>
+                </td>
+            </tr>
+            <%
+                }
+            %>
+            </tbody>
+        </table>
+    </div>
     <form action="Index" method="get">
         <p><input type="submit" value="戻る" class="btn btn-primary shadow"></p>
     </form>
 
+    <%@include file="/WEB-INF/jsp/footer.jsp" %>
 </article>
 
 </body>

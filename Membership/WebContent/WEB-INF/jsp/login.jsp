@@ -21,7 +21,7 @@
 
 <article>
     <form action="Login" method="post" id="form" onsubmit="return savePassword()">
-        <h1>Login</h1>
+        <div class="top shadow"><h1>Login</h1></div>
         <div class="loginError"><%=error%>
         </div>
         <div class="group col-8">

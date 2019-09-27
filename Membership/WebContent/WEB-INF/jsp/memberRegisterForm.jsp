@@ -20,7 +20,7 @@
 
 <article>
     <form action="Register" method="post">
-        <h1>Sign up</h1>
+        <div class="top shadow"><h1>Sign up</h1></div>
         <div class="group col-8">
             <h4>ID</h4><span>Only numbers</span><span class="error">　<%=error%></span>
             <div class="input-group input-group-lg">
