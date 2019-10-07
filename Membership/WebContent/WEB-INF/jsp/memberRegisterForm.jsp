@@ -19,7 +19,7 @@
 %>
 
 <article>
-    <form action="Register" method="post">
+    <form action="Check" method="post">
         <div class="top shadow"><h1>Sign up</h1></div>
         <div class="group col-8">
             <h4>ID</h4><span>Only numbers</span><span class="error">　<%=error%></span>

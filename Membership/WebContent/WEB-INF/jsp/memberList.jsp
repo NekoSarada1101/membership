@@ -43,9 +43,6 @@
             </tbody>
         </table>
     </div>
-    <form action="Index" method="get">
-        <p><input type="submit" value="戻る" class="btn btn-primary shadow"></p>
-    </form>
 
     <%@include file="/WEB-INF/jsp/footer.jsp" %>
 </article>

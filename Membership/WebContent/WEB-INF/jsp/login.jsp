@@ -13,7 +13,7 @@
 <body class="container shadow">
 <%
     String error = (String) session.getAttribute("loginFailed");
-    session.invalidate();
+    session.invalidate(); //エラー文が表示された後再びここに訪問した際にエラー文が表示されないようにする
     if (error == null) {
         error = "";
     }

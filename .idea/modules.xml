@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FilterEX.iml" filepath="$PROJECT_DIR$/FilterEX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/IncludeEX.iml" filepath="$PROJECT_DIR$/IncludeEX.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Membership.iml" filepath="$PROJECT_DIR$/Membership.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Servers.iml" filepath="$PROJECT_DIR$/Servers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/absence.iml" filepath="$PROJECT_DIR$/absence.iml" />
     </modules>
   </component>
 </project>
